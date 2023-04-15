@@ -1,0 +1,17 @@
+from yelpapi import YelpAPI
+import pandas as pd
+
+
+api_key ="s-KiqfkRtpeXJXXgVmEMKRof7o55zbOdfSzMt35Rm7Sr1Aa8k8UdW9I8_KU_zQ_qcl4MhBI1srTLx-2YSQ1OLqquCnR1kCRnJ6NkVS7ijagiZapLrmwhsN2t8kk2ZHYx"
+
+yelp_api = YelpAPI(api_key)
+#search_query
+
+search_term ="pizza"
+search_location = "Chicago, IN"
+search_sort_by = ""#best_match, rating, reviwes_count, distance 
+search_limit = 20
+search_resuelts = yelp_api.search_query(term=search_term,sort= search_sort_by,limit=search_limit)
+
+print(search_resuelts)
+
